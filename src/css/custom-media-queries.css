@@ -1,0 +1,8 @@
+@custom-media --retina (min-width: 2000px);
+@custom-media --full-hd (min-width: 1920px);
+/* 1600px - нативное */
+@custom-media --md (max-width: 1360px);
+@custom-media --sm (max-width: 992px);
+@custom-media --ph (max-width: 768px);
+@custom-media --xs (max-width: 575px);
+@custom-media --ixs (max-width: 400px);

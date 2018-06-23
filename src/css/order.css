@@ -1,0 +1,144 @@
+@keyframes spin { 
+  from { 
+    transform: rotate(0deg); 
+  } to { 
+    transform: rotate(360deg); 
+  }
+}
+
+.orders {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.orders__input {
+	width: 190px;
+}
+.level-right .orders__company:not(:last-child) {
+	display: inline-block;
+	color: #333;
+	transition: all .4s;
+	margin-right: 20px;
+	margin-bottom: 0;
+}
+.orders__company:hover {
+	opacity: .5;
+}
+.orders__button {
+	margin-top: 8px;
+}
+.orders__table {
+	width: 100%;
+	min-width: 1300px;
+	font-size: 14px;
+}
+.orders__table-wrapper.loading,
+.order__info.loading {
+	opacity: .5;
+	position: relative;
+}
+.orders__table-wrapper.loading:after,
+.order__info.loading:after {
+	display: block;
+	content: '';
+	background-image: url('/assets/img/svg/loading-mark.svg');
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 100px;
+	left: calc(50% - 25px);
+	animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.orders__row {
+	cursor: pointer;
+	transition: all .4s ease;
+}
+.orders__row_hide {
+	display: none;
+}
+.orders__row:hover {
+	background: lightgrey;
+}
+.orders__status {
+	text-align: center;
+}
+.orders__ok {
+	color: green;
+}
+.orders__cancel {
+	color: red;
+}
+
+@media(--sm) {
+	.orders__header {
+		flex-direction: column;
+	}
+	.orders__form {
+		margin-bottom: 20px;
+	}
+}
+@media(--ph) {
+	.level-item:not(:last-child) {
+		margin-bottom: 0;
+	}
+	.orders__header {
+		align-items: flex-start;
+	}
+	.orders__form,
+	.orders__right {
+		display: flex;
+		align-items: center;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.orders__right {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.orders__period {
+		margin-right: 20px;
+	}
+	.orders__inputs {
+		flex-direction: column;
+	}
+	.orders__inputs .control:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	.orders__inputs .control .input,
+	.orders__inputs .control .button {
+		border-radius: 4px !important;
+	}
+	.orders__company {
+		font-size: 1.5rem;
+	}
+}
+
+.order {
+	padding: 50px;
+	display: flex;
+}
+.order__info {
+	width: 30%;
+	min-width: 500px;
+	margin-right: 50px;
+	margin-bottom: 0 !important;
+}
+.order__column {
+	display: inline-block;
+	width: 45%;
+}
+.order__column:first-child {
+	font-style: italic;
+}
+.order__button {
+	margin-top: 20px;
+}
+.order__area {
+	margin-top: 30px;
+}
+.order__map {
+	width: 100%;
+}
